@@ -5,7 +5,6 @@ namespace :db do
   end
 end
 
-
 def calculate_mean_rating
   @apps = App.all
   @apps.each do |app|
@@ -24,3 +23,8 @@ def calculate_mean_rating
 end
 
 # test avec rake db:mean_rating
+
+# Calcul de la moyenne d'une app avec SQL
+# SELECT app_id, AVG(rating)
+# FROM reviews
+# GROUP BY app_id
