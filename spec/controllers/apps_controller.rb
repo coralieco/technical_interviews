@@ -18,7 +18,7 @@ RSpec.describe AppsController, :type => :controller do
       post :index, { :app => { :name => "name" } }
       expect(response.content_type).to eq "text/html"
     end
-    it "reponds to json format" do
+    it "responds to json format" do
       post :index, { :app => { :name => "name"}, :format => :json }
       expect(response.content_type).to eq "application/json"
     end
