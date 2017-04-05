@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170331091610) do
+ActiveRecord::Schema.define(version: 20170405101700) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.boolean  "published"
+    t.float    "mean_rating"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170331091610) do
     t.integer  "app_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "rating"
   end
 
   add_index "reviews", ["app_id"], name: "index_reviews_on_app_id"
