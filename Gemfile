@@ -39,5 +39,6 @@ group :development do
 
   # Testing framework
   gem 'rspec-rails', '~> 3.5'
+
 end
 
